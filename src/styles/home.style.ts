@@ -48,7 +48,7 @@ export const welcomeBox: CSSProperties = {
   paddingLeft: "0.5em",
   display: "flex",
   flexDirection: "column",
-  fontSize: "0.5em",
+  fontSize: "0.4em",
   margin: "0.2em",
   color: CONTENT_FONT_COLOR,
 };
