@@ -51,6 +51,7 @@ export default function Home() {
         ) : (
           <></>
         )}
+
         <Func matches={matches} />
       </div>
       {/* <div
@@ -63,6 +64,7 @@ export default function Home() {
 function Func(props: any) {
   return (
     <div
+      className="Animate"
       style={
         props.matches ? { ...contentBox, width: "30rem" } : { ...contentBox }
       }

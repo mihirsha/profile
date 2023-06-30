@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+.Animate {
+  animation: fadeInAnimation 2s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    /* transform: translateY(-1%); */
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-17px);
+    opacity: .5;
+  }
+}
+
 /* ::-webkit-scrollbar {
   width: 2px
 } */

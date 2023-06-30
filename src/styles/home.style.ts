@@ -59,6 +59,8 @@ export const contentBox: CSSProperties = {
   justifyContent: "center",
   width: "20rem",
   marginBottom: "0.7em",
+  // opacity: 0,
+  // transition: "opacity 0.5s ease-in",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
 };
 
