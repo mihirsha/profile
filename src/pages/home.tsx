@@ -13,7 +13,7 @@ import { GREET_MESSAGE, SUMMARY_1, SUMMARY_2, SUMMARY_3 } from "../constant";
 import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import { WORDS } from "../constant";
-import { NavBar } from "../components/navbar";
+import { NavBar, NameNavBar } from "../components/navbar";
 
 export default function Home() {
   const [matches, setMatches] = useState(
@@ -28,6 +28,7 @@ export default function Home() {
 
   return (
     <div style={{ overflow: "hidden" }}>
+      <NameNavBar />
       {/* {matches ? <NavBar /> : <></>} */}
       <div
         style={
@@ -38,23 +39,23 @@ export default function Home() {
       >
         {matches ? (
           <div style={imageLayout}>
-            <div
+            {/* <div
               style={{
                 height: "35%",
                 width: "50%",
                 backgroundColor: "blue",
                 borderRadius: "50%",
               }}
-            ></div>
+            ></div> */}
           </div>
         ) : (
           <></>
         )}
         <Func matches={matches} />
       </div>
-      <div
+      {/* <div
         style={{ height: "2rem", backgroundColor: "white", width: "100vw" }}
-      ></div>
+      ></div> */}
     </div>
   );
 }
