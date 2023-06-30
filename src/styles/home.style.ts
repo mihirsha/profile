@@ -9,7 +9,7 @@ import {
 export const mainContainer: CSSProperties = {
   display: "flex",
   width: "100vw",
-  height: "85vh",
+  height: "75vh",
   fontSize: "3rem",
   color: "white",
   justifyContent: "center",

@@ -32,7 +32,9 @@ export function NameNavBar() {
   return (
     <>
       <div style={nameNavbarComponent}>
-        <div style={{ margin: "2em" }}>Mihir Shah</div>
+        <div className="Animate-navbar" style={{ margin: "2em" }}>
+          Mihir Shah
+        </div>
         <div
           style={{
             margin: "2em",
@@ -82,7 +84,7 @@ export function IconButton(props: any) {
 
   return (
     <div
-      // className="Animate"
+      className="Animate-navbar"
       style={
         isClicked
           ? {

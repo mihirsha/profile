@@ -14,6 +14,8 @@ import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import { WORDS } from "../constant";
 import { NavBar, NameNavBar } from "../components/navbar";
+import { FaArrowDown } from "react-icons/fa";
+import { MAIN_SCREEN_BACKGROUND } from "../palette";
 
 export default function Home() {
   const [matches, setMatches] = useState(
@@ -54,9 +56,22 @@ export default function Home() {
 
         <Func matches={matches} />
       </div>
-      {/* <div
-        style={{ height: "2rem", backgroundColor: "white", width: "100vw" }}
-      ></div> */}
+
+      <div
+        style={{
+          height: "10vh",
+          backgroundColor: MAIN_SCREEN_BACKGROUND,
+          width: "100vw",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <FaArrowDown
+          className="Animate-down-arrow"
+          style={{ color: "black" }}
+        />
+      </div>
     </div>
   );
 }
