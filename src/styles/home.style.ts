@@ -82,3 +82,12 @@ export const imageLayout: CSSProperties = {
   width: "30%",
   // backgroundColor: "yellow",
 };
+
+export const downArrowLayout: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "10vh",
+  width: "100vw",
+  backgroundColor: MAIN_SCREEN_BACKGROUND,
+};

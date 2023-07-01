@@ -1,7 +1,15 @@
 import { useState } from "react";
-import { navbarComponent, nameNavbarComponent } from "../styles/navbar.styles";
+import {
+  navbarComponent,
+  nameNavbarComponent,
+  socialIconsButton,
+  socialIcons,
+  socialIconsHover,
+  iconsDownLayout,
+} from "../styles/navbar.styles";
 import { NavbarButton } from "./button";
 import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { PERSON_NAME_FIRSTNAME, PERSON_NAME_SURNAME } from "../constant";
 
 const array = ["Home", "About me", "Resume", "Experience", "Projects"];
 
@@ -10,41 +18,31 @@ const mapping = [
   { Github: "https://github.com/mihirsha" },
   { Linkedin: "https://www.linkedin.com/in/mihirshah0114/" },
 ];
-// underLine
 
 export function NavBar() {
   return (
     <div style={navbarComponent}>
       {/* <div style={{ display: "flex", flexDirection: "row" }}> */}
       {array.map((it: string, index: any) => {
-        return (
-          <>
-            <NavbarButton text={it} />
-          </>
-        );
+        return <NavbarButton text={it} />;
       })}
       {/* </div> */}
     </div>
   );
 }
 
+// const control = true;
+
 export function NameNavBar() {
   return (
     <>
       <div style={nameNavbarComponent}>
         <div className="Animate-navbar" style={{ margin: "2em" }}>
-          Mihir Shah
+          {PERSON_NAME_FIRSTNAME} {PERSON_NAME_SURNAME}
         </div>
-        <div
-          style={{
-            margin: "2em",
-            // backgroundColor: "brown",
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-          }}
-        >
-          {/* <SocialIcon type="instagram" /> */}
+
+        {/* <NavBar /> */}
+        <div style={iconsDownLayout}>
           {mapping.map((item, index) => {
             console.log(index);
             return (
@@ -86,73 +84,25 @@ export function IconButton(props: any) {
     <div
       className="Animate-navbar"
       style={
-        isClicked
+        isClicked || isHover
           ? {
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              ...socialIconsButton,
               height: "45px",
               width: "45px",
-              borderRadius: "70%",
               backgroundColor: "#c6c6c6",
-              margin: "0.8em",
-              cursor: "pointer",
-              transition: "all .6s",
             }
-          : isHover
-          ? {
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "45px",
-              width: "45px",
-              borderRadius: "70%",
-              backgroundColor: "#e0e0e0",
-              margin: "0.8em",
-              cursor: "pointer",
-              transition: "all .6s",
-            }
-          : {
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "40px",
-              width: "40px",
-              borderRadius: "70%",
-              backgroundColor: "#e0e0e0",
-              cursor: "pointer",
-              margin: "0.7em",
-              transition: "all .2s",
-            }
+          : socialIconsButton
       }
       onClick={handleMouseClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {props.idx === 0 ? (
-        <FaInstagram
-          style={
-            isHover
-              ? { color: "black", transition: "all .2s", width: "90px" }
-              : { color: "#666", transition: "all .0s", height: "24px" }
-          }
-        />
+        <FaInstagram style={isHover ? socialIcons : socialIconsHover} />
       ) : props.idx === 1 ? (
-        <FaGithub
-          style={
-            isHover
-              ? { color: "black", transition: "all .2s", width: "90px" }
-              : { color: "#666", transition: "all .0s", height: "24px" }
-          }
-        />
+        <FaGithub style={isHover ? socialIcons : socialIconsHover} />
       ) : (
-        <FaLinkedinIn
-          style={
-            isHover
-              ? { color: "black", transition: "all .2s", width: "90px" }
-              : { color: "#666", transition: "all .0s", height: "24px" }
-          }
-        />
+        <FaLinkedinIn style={isHover ? socialIcons : socialIconsHover} />
       )}
     </div>
   );

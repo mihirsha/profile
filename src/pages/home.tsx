@@ -8,6 +8,7 @@ import {
   summaryFont,
   imageLayout,
   mainContainer,
+  downArrowLayout,
 } from "../styles/home.style";
 import { GREET_MESSAGE, SUMMARY_1, SUMMARY_2, SUMMARY_3 } from "../constant";
 import { Typewriter } from "react-simple-typewriter";
@@ -57,16 +58,7 @@ export default function Home() {
         <Func matches={matches} />
       </div>
 
-      <div
-        style={{
-          height: "10vh",
-          backgroundColor: MAIN_SCREEN_BACKGROUND,
-          width: "100vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <div style={downArrowLayout}>
         <FaArrowDown
           className="Animate-down-arrow"
           style={{ color: "black" }}
