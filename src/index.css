@@ -13,7 +13,11 @@ code {
 }
 
 .Animate {
-  animation: fadeInAnimation 2s ease-in-out;
+  animation: fadeInAnimation 1s ease-in-out;
+}
+
+.Animate-name {
+  animation: fadeInAnimation-name-homepage 1s ease;
 }
 
 .Animate-down-arrow {
@@ -41,6 +45,19 @@ code {
     opacity: .5;
   }
 }
+
+@keyframes fadeInAnimation-name-homepage {
+  0% {
+    /* transform: translateY(-1%); */
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
+}
+
+
 
 
 @keyframes fadeInAnimation-downArrow {

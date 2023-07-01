@@ -12,12 +12,11 @@ export const mainContainer: CSSProperties = {
   height: "75vh",
   fontSize: "3rem",
   color: "white",
-  justifyContent: "center",
+  // justifyContent: "center",
   fontFamily: "Montserrat",
   alignItems: "center",
   flexDirection: "row",
-  background: MAIN_SCREEN_BACKGROUND,
-  // backgroundColor: "purple",
+  backgroundColor: MAIN_SCREEN_BACKGROUND,
 };
 
 export const nameBox: CSSProperties = {
@@ -79,7 +78,7 @@ export const imageLayout: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   height: "100%",
-  width: "30%",
+  width: "50vw",
   // backgroundColor: "yellow",
 };
 

@@ -37,7 +37,7 @@ export function NameNavBar() {
   return (
     <>
       <div style={nameNavbarComponent}>
-        <div className="Animate-navbar" style={{ margin: "2em" }}>
+        <div className="Animate-name" style={{ margin: "2em" }}>
           {PERSON_NAME_FIRSTNAME} {PERSON_NAME_SURNAME}
         </div>
 
@@ -87,8 +87,8 @@ export function IconButton(props: any) {
         isClicked || isHover
           ? {
               ...socialIconsButton,
-              height: "45px",
-              width: "45px",
+              height: "50px",
+              width: "50px",
               backgroundColor: "#c6c6c6",
             }
           : socialIconsButton
