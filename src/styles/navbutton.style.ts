@@ -17,5 +17,5 @@ export const underLine: CSSProperties = {
   height: "0.1rem",
   width: "2.5rem",
   backgroundColor: "grey",
-  transition: "all .8s",
+  transition: "all 1s",
 };

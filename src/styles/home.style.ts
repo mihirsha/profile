@@ -9,15 +9,14 @@ import {
 export const mainContainer: CSSProperties = {
   display: "flex",
   width: "100vw",
-  height: "100vh",
+  height: "75vh",
   fontSize: "3rem",
   color: "white",
-  justifyContent: "center",
+  // justifyContent: "center",
   fontFamily: "Montserrat",
   alignItems: "center",
   flexDirection: "row",
-  background: MAIN_SCREEN_BACKGROUND,
-  // backgroundColor: "purple",
+  backgroundColor: MAIN_SCREEN_BACKGROUND,
 };
 
 export const nameBox: CSSProperties = {
@@ -59,6 +58,8 @@ export const contentBox: CSSProperties = {
   justifyContent: "center",
   width: "20rem",
   marginBottom: "0.7em",
+  // opacity: 0,
+  // transition: "opacity 0.5s ease-in",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
 };
 
@@ -77,6 +78,17 @@ export const imageLayout: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   height: "100%",
-  width: "30%",
+  width: "50vw",
   // backgroundColor: "yellow",
 };
+
+export const downArrowLayout: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "10vh",
+  width: "100vw",
+  backgroundColor: MAIN_SCREEN_BACKGROUND,
+};
+
+// committed
