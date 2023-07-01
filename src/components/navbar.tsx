@@ -87,8 +87,8 @@ export function IconButton(props: any) {
         isClicked || isHover
           ? {
               ...socialIconsButton,
-              height: "45px",
-              width: "45px",
+              height: "2.6em",
+              width: "2.6em",
               backgroundColor: "#c6c6c6",
             }
           : socialIconsButton

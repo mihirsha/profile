@@ -30,7 +30,7 @@ export const firstNameBox: CSSProperties = {
   display: "flex",
   flexDirection: "row",
   fontWeight: "bold",
-  fontSize: "0.7em",
+  fontSize: ".7em",
   marginLeft: "0.2em",
   marginBottom: "0.5em",
   color: FIRSTNAME_COLOR,

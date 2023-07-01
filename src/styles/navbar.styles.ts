@@ -19,6 +19,7 @@ export const nameNavbarComponent: CSSProperties = {
   justifyContent: "space-between",
   width: "100vw",
   height: "15vh",
+  fontSize: "1.5em",
   fontFamily: "Montserrat",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
 };
@@ -27,8 +28,8 @@ export const socialIconsButton: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "40px",
-  width: "40px",
+  height: "2.2em",
+  width: "2.2em",
   backgroundColor: "#e0e0e0",
   borderRadius: "70%",
   margin: "0.8em",
