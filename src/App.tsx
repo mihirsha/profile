@@ -4,10 +4,8 @@ import Home from "./pages/home";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="" element={<Home />} />
-      </Routes>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Home />
     </BrowserRouter>
   );
 }
