@@ -15,7 +15,7 @@ export const navbarComponent: CSSProperties = {
 export const nameNavbarComponent: CSSProperties = {
   display: "flex",
   flexDirection: "row",
-  alignItems: "center",
+  // alignItems: "center",
   justifyContent: "space-between",
   width: "100vw",
   height: "15vh",
