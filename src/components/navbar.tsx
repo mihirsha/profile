@@ -14,9 +14,9 @@ import { PERSON_NAME_FIRSTNAME, PERSON_NAME_SURNAME } from "../constant";
 const array = ["Home", "About me", "Resume", "Experience", "Projects"];
 
 const mapping = [
-  { Instagram: "https://www.instagram.com/mihirr_shah/" },
-  { Github: "https://github.com/mihirsha" },
-  { Linkedin: "https://www.linkedin.com/in/mihirshah0114/" },
+  "https://www.instagram.com/mihirr_shah/",
+  "https://github.com/mihirsha",
+  "https://www.linkedin.com/in/mihirshah0114/",
 ];
 
 export function NavBar() {
@@ -33,7 +33,7 @@ export function NavBar() {
 
 // const control = true;
 
-export function NameNavBar() {
+export function NameNavBar(props: any) {
   return (
     <>
       <div style={nameNavbarComponent}>
@@ -43,16 +43,16 @@ export function NameNavBar() {
 
         {/* <NavBar /> */}
         <div style={iconsDownLayout}>
-          {mapping.map((item, index) => {
-            console.log(index);
-            return (
-              <IconButton
-                key={index}
-                idx={index}
-                socialMediaUrl={item["Instagram"]}
-              />
-            );
-          })}
+          {props.matches ? (
+            mapping.map((item, index) => {
+              console.log(index);
+              return (
+                <IconButton key={index} idx={index} socialMediaUrl={item} />
+              );
+            })
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </>

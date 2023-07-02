@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div style={{ overflow: "hidden" }}>
-      <NameNavBar />
+      <NameNavBar matches={matches} />
       {/* {matches ? <NavBar /> : <></>} */}
       <div
         style={

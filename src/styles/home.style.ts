@@ -9,7 +9,7 @@ import {
 export const mainContainer: CSSProperties = {
   display: "flex",
   width: "100vw",
-  height: "75vh",
+  height: "75svh",
   fontSize: "3rem",
   color: "white",
   // justifyContent: "center",
@@ -57,7 +57,7 @@ export const contentBox: CSSProperties = {
   flexDirection: "column",
   justifyContent: "center",
   width: "20rem",
-  marginBottom: "0.7em",
+  margin: "0.7em",
   // opacity: 0,
   // transition: "opacity 0.5s ease-in",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
@@ -86,7 +86,7 @@ export const downArrowLayout: CSSProperties = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  height: "10vh",
+  height: "10svh",
   width: "100vw",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
 };
