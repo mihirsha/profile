@@ -8,7 +8,13 @@ import {
   iconsDownLayout,
 } from "../styles/navbar.styles";
 import { NavbarButton } from "./button";
-import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedinIn,
+  FaBars,
+  FaArrowLeft,
+} from "react-icons/fa";
 import { PERSON_NAME_FIRSTNAME, PERSON_NAME_SURNAME } from "../constant";
 
 const array = ["Home", "About me", "Resume", "Experience", "Projects"];
@@ -42,18 +48,26 @@ export function NameNavBar(props: any) {
         </div>
 
         {/* <NavBar /> */}
-        <div style={iconsDownLayout}>
-          {props.matches ? (
-            mapping.map((item, index) => {
+        {props.matches ? (
+          <div style={iconsDownLayout}>
+            {mapping.map((item, index) => {
               console.log(index);
               return (
                 <IconButton key={index} idx={index} socialMediaUrl={item} />
               );
-            })
-          ) : (
-            <></>
-          )}
-        </div>
+            })}
+          </div>
+        ) : (
+          <div
+            style={{
+              margin: "1.5em",
+            }}
+          >
+            {/* <IconButton isMenu={true}> */}
+            <FaBars onClick={() => props.setOpenMenu(true)} />
+            {/* </IconButton> */}
+          </div>
+        )}
       </div>
     </>
   );
