@@ -37,7 +37,7 @@ export function NameNavBar() {
   return (
     <>
       <div style={nameNavbarComponent}>
-        <div className="Animate-name" style={{ margin: "1em" }}>
+        <div className="Animate-name" style={{ margin: "1.5em" }}>
           {PERSON_NAME_FIRSTNAME} {PERSON_NAME_SURNAME}
         </div>
 
