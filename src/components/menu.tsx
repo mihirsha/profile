@@ -15,6 +15,7 @@ export function Menu(props: any) {
       <div style={menuPageLayout}>
         <div style={backBtnLayout}>
           <FaArrowLeft
+            className="Animate-Menu-Name"
             style={backBtnStyle}
             onClick={() => props.setOpenMenu(false)}
           />
@@ -22,7 +23,7 @@ export function Menu(props: any) {
         <div style={menuContentLayout}>
           {MENU_ITEMS.map((item) => {
             return (
-              <a style={individualLayout} href="">
+              <a className="Animate-Menu-Name" style={individualLayout} href="">
                 {item}
               </a>
             );
