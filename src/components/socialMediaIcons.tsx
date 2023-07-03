@@ -20,7 +20,6 @@ export function SocialMediaIcons() {
 
 export function IconButton(props: any) {
   const [isHover, setIsHover] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
 
   console.log(props.idx);
   const handleMouseEnter = () => {
@@ -32,9 +31,7 @@ export function IconButton(props: any) {
   };
 
   const handleMouseClick = () => {
-    setIsClicked(true);
     window.open(props.socialMediaUrl, "_blank");
-    setIsClicked(false);
 
     //
   };
@@ -43,7 +40,7 @@ export function IconButton(props: any) {
     <div
       className="Animate-navbar"
       style={
-        isClicked || isHover
+        isHover
           ? {
               ...socialIconsButton,
               height: "50px",
