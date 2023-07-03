@@ -10,8 +10,7 @@ import {
 import { NavbarButton } from "./button";
 import { FaInstagram, FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { PERSON_NAME_FIRSTNAME, PERSON_NAME_SURNAME } from "../constant";
-
-const array = ["Home", "About me", "Resume", "Experience", "Projects"];
+import { MENU_ITEMS } from "../constant";
 
 const mapping = [
   "https://www.instagram.com/mihirr_shah/",
@@ -23,7 +22,7 @@ export function NavBar() {
   return (
     <div style={navbarComponent}>
       {/* <div style={{ display: "flex", flexDirection: "row" }}> */}
-      {array.map((it: string, index: any) => {
+      {MENU_ITEMS.map((it: string, index: any) => {
         return <NavbarButton text={it} />;
       })}
       {/* </div> */}

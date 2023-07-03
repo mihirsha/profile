@@ -10,3 +10,11 @@ export const SUMMARY_2 =
   " Strong at design & integrating systems with intuitive problem-solving skills.";
 export const SUMMARY_3 =
   "Passionate about implementing and launching robust and scalable systems as well maintaining one.";
+
+export const MENU_ITEMS = [
+  "Home",
+  "About me",
+  "Resume",
+  "Experience",
+  "Projects",
+];
