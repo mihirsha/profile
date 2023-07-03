@@ -61,6 +61,7 @@ export const contentBox: CSSProperties = {
   // opacity: 0,
   // transition: "opacity 0.5s ease-in",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
+  // backgroundColor: "yellow",
 };
 
 export const summaryFont: CSSProperties = {

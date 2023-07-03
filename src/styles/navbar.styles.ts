@@ -50,7 +50,13 @@ export const socialIconsHover: CSSProperties = {
 
 export const iconsDownLayout: CSSProperties = {
   margin: "2em",
-  // backgroundColor: "brown",
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems: "center",
+};
+
+export const iconsDownLayoutMob: CSSProperties = {
+  margin: ".2em",
   display: "flex",
   justifyContent: "space-around",
   alignItems: "center",

@@ -11,6 +11,7 @@ import {
   downArrowLayout,
 } from "../styles/home.style";
 import { GREET_MESSAGE, SUMMARY_1, SUMMARY_2, SUMMARY_3 } from "../constant";
+import { SocialMediaIcons } from "../components/socialMediaIcons";
 import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import { WORDS } from "../constant";
@@ -18,6 +19,7 @@ import { NavBar, NameNavBar } from "../components/navbar";
 import { FaArrowDown, FaArrowLeft } from "react-icons/fa";
 import { MAIN_SCREEN_BACKGROUND } from "../palette";
 import { Menu } from "../components/menu";
+import { iconsDownLayout, iconsDownLayoutMob } from "../styles/navbar.styles";
 
 export default function Home() {
   const [matches, setMatches] = useState(
@@ -106,6 +108,14 @@ function Func(props: any) {
         {SUMMARY_2}
       </div>
       <div style={summaryFont}>&#x2022; {SUMMARY_3}</div>
+
+      {!props.matches ? (
+        <div style={iconsDownLayoutMob}>
+          <SocialMediaIcons />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

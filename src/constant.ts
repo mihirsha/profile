@@ -18,3 +18,9 @@ export const MENU_ITEMS = [
   "Experience",
   "Projects",
 ];
+
+export const MAPPING_URL = [
+  "https://www.instagram.com/mihirr_shah/",
+  "https://github.com/mihirsha",
+  "https://www.linkedin.com/in/mihirshah0114/",
+];
