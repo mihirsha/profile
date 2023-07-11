@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   nameBox,
   firstNameBox,
@@ -10,6 +12,7 @@ import {
   mainContainer,
   downArrowLayout,
 } from "../styles/home.style";
+import { motion } from "framer-motion";
 import { GREET_MESSAGE, SUMMARY_1, SUMMARY_2, SUMMARY_3 } from "../constant";
 import { SocialMediaIcons } from "../components/socialMediaIcons";
 import { Typewriter } from "react-simple-typewriter";
@@ -21,16 +24,14 @@ import { MAIN_SCREEN_BACKGROUND } from "../palette";
 import { Menu } from "../components/menu";
 import { iconsDownLayout, iconsDownLayoutMob } from "../styles/navbar.styles";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   );
 
   const [openMenu, setOpenMenu] = useState(false);
-
-  useEffect(() => {
-    console.log(openMenu);
-  }, [openMenu]);
 
   useEffect(() => {
     window
@@ -71,6 +72,7 @@ export default function Home() {
 
           <div style={downArrowLayout}>
             <FaArrowDown
+              id="Animate-arrow"
               className="Animate-down-arrow"
               style={{ color: "black" }}
             />
@@ -85,8 +87,25 @@ export default function Home() {
 
 function Func(props: any) {
   return (
-    <div
-      className="Animate"
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          // ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1.6,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        y: -20,
+        transition: {
+          ease: "easeInOut",
+          duration: 0.8,
+        },
+      }}
+      // className="Animate"
       style={
         props.matches ? { ...contentBox, width: "30rem" } : { ...contentBox }
       }
@@ -116,6 +135,6 @@ function Func(props: any) {
       ) : (
         <></>
       )}
-    </div>
+    </motion.div>
   );
 }

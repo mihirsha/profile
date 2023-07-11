@@ -11,6 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', 'Montserrat'
     monospace;
 }
+#headingdiv{
+  opacity: 0;
+}
+#content-div{
+  opacity: 0;
+}
+
+.Animate-heading {
+  animation: fadeInAnimation 1s ease-in-out;
+}
 
 .Animate {
   animation: fadeInAnimation 1s ease-in-out;
@@ -67,9 +77,6 @@ code {
     opacity: .6;
   }
 }
-
-
-
 
 
 @keyframes fadeInAnimation-downArrow {
