@@ -29,7 +29,7 @@ export const firstNameBox: CSSProperties = {
   display: "flex",
   flexDirection: "row",
   fontWeight: "bold",
-  fontSize: "0.7em",
+  fontSize: "2.2rem",
   marginLeft: "0.2em",
   marginBottom: "0.5em",
   color: FIRSTNAME_COLOR,
@@ -68,7 +68,9 @@ export const summaryFont: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  fontFamily: "Poppins",
   fontSize: "0.35em",
+
   marginLeft: "0.9em",
   marginBottom: "0.3em",
   color: CONTENT_FONT_COLOR,

@@ -4,17 +4,19 @@ export const aboutMeTextLayout: CSSProperties = {
   width: "50%",
   height: "50%",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   textAlign: "center",
-  // backgroundColor: "yellow",
+  fontSize: "1.2rem",
+  //   marginBottom: "1.2em",
 };
 
 export const contentLayout: CSSProperties = {
   height: "100%",
   width: "85vw",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   fontFamily: "Poppins",
+  //   fontFamily: "Montserrat",
 };
 
 export const lineLayout: CSSProperties = {
@@ -28,12 +30,12 @@ export const headingLayout: CSSProperties = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  fontFamily: "Poppins",
+  //   fontFamily: "Poppins",
+  fontFamily: "Montserrat",
   fontWeight: "900",
+  fontSize: "2.6rem",
   color: "rgba(72,69,69,1)",
   marginLeft: ".5em",
-  fontSize: "3rem",
-  // backgroundColor: "yellow",
   width: "90vw",
 };
 
@@ -44,8 +46,17 @@ export const outerLayout: CSSProperties = {
 export const mainLayout: CSSProperties = {
   display: "flex",
   width: "100%",
-  height: "100svh",
+  //   height: "100svh",
   flexDirection: "column",
   alignItems: "center",
   backgroundColor: "#e4e4e4",
+};
+
+export const personalInfoLayout: CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
+  fontFamily: "Poppins",
+  fontSize: "1.1rem",
+  fontWeight: "600",
+  color: "#181e27",
 };

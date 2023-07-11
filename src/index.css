@@ -17,6 +17,9 @@ code {
 #content-div{
   opacity: 0;
 }
+#personalInfo-div{
+  opacity: 0;
+}
 
 .Animate-heading {
   animation: fadeInAnimation 1s ease-in-out;

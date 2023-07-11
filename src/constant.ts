@@ -25,10 +25,19 @@ export const MAPPING_URL = [
   "https://www.linkedin.com/in/mihirshah0114/",
 ];
 
-export const ABOUT_ME_1st = `Hello! I’m ${PERSON_NAME_FIRSTNAME} ${PERSON_NAME_SURNAME}.`;
+export const ABOUT_ME_1st = `Hello! I’m ${PERSON_NAME_FIRSTNAME} ${PERSON_NAME_SURNAME}`;
 
 export const ABOUT_ME_2nd =
-  ` I have rich experience in creating statefull web sites.` +
+  " I am a full-stack developer with a focus on backend development." +
+  " I have experience on an year in creating stateful web sites." +
   " I have been designing and implementing user interfaces, building scalable and" +
-  " efficient server-side logic, and integrating different components to create " +
-  "functional and cohesive web applications";
+  " efficient server-side logic.";
+
+// PERSONAL INFORMATION
+export const personalInfoList = ["EXPERIENCE", "AGE", "RESIDENCE", "ADDRESS"];
+export const personalInfoAnsList = [
+  "1 yr",
+  "22",
+  "India",
+  "Bengaluru, Karnataka",
+];
