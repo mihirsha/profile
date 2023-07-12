@@ -19,7 +19,7 @@ export const nameNavbarComponent: CSSProperties = {
   justifyContent: "space-between",
   width: "100vw",
   height: "15svh",
-  fontSize: "1.25em",
+  fontSize: "1.1em",
   fontFamily: "Montserrat",
   backgroundColor: MAIN_SCREEN_BACKGROUND,
 };

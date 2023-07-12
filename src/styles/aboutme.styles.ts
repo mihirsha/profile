@@ -2,12 +2,11 @@ import { CSSProperties } from "react";
 
 export const aboutMeTextLayout: CSSProperties = {
   width: "50%",
-  height: "50%",
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
   fontSize: "1.2rem",
-  //   marginBottom: "1.2em",
+  margin: "2.5em",
 };
 
 export const contentLayout: CSSProperties = {
@@ -59,4 +58,12 @@ export const personalInfoLayout: CSSProperties = {
   fontSize: "1.1rem",
   fontWeight: "600",
   color: "#181e27",
+};
+
+export const contentUpperLayout: CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
+  width: "100%",
+  marginBottom: "1.5em",
+  //   backgroundColor: "yellow",
 };

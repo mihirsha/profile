@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { FaArrowLeft } from "react-icons/fa";
-import { MENU_ITEMS } from "../constant";
+import { MENU_ITEMS, MENU_ITEMS_DIV } from "../constant";
 import {
   menuPageLayout,
   backBtnLayout,
@@ -21,9 +21,13 @@ export function Menu(props: any) {
           />
         </div>
         <div style={menuContentLayout}>
-          {MENU_ITEMS.map((item) => {
+          {MENU_ITEMS.map((item: string, idx: number) => {
             return (
-              <a className="Animate-Menu-Name" style={individualLayout} href="">
+              <a
+                className="Animate-Menu-Name"
+                style={individualLayout}
+                href={MENU_ITEMS_DIV[idx]}
+              >
                 {item}
               </a>
             );

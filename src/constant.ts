@@ -18,6 +18,13 @@ export const MENU_ITEMS = [
   "Experience",
   "Projects",
 ];
+export const MENU_ITEMS_DIV = [
+  "#About-me",
+  "About me",
+  "Resume",
+  "Experience",
+  "Projects",
+];
 
 export const MAPPING_URL = [
   "https://www.instagram.com/mihirr_shah/",
@@ -25,18 +32,22 @@ export const MAPPING_URL = [
   "https://www.linkedin.com/in/mihirshah0114/",
 ];
 
+// ABOUT ME
+
 export const ABOUT_ME_1st = `Hello! I’m ${PERSON_NAME_FIRSTNAME} ${PERSON_NAME_SURNAME}`;
 
 export const ABOUT_ME_2nd =
-  " I am a full-stack developer with a focus on backend development." +
-  " I have experience on an year in creating stateful web sites." +
-  " I have been designing and implementing user interfaces, building scalable and" +
+  " A full-stack developer with a focus on backend development." +
+  " Been designing and implementing user interfaces, building scalable and" +
   " efficient server-side logic.";
+
+// I have experience of an year in creating stateful web sites." +
+// " I have
 
 // PERSONAL INFORMATION
 export const personalInfoList = ["EXPERIENCE", "AGE", "RESIDENCE", "ADDRESS"];
 export const personalInfoAnsList = [
-  "1 yr",
+  "0.6 yr",
   "22",
   "India",
   "Bengaluru, Karnataka",

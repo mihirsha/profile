@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   ABOUT_ME_1st,
   ABOUT_ME_2nd,
@@ -15,6 +15,7 @@ import {
   headingLayout,
   lineLayout,
   mainLayout,
+  contentUpperLayout,
   outerLayout,
 } from "../styles/aboutme.styles";
 import { PersonalInfo } from "../components/personalInfo";
@@ -22,6 +23,16 @@ import { PersonalInfo } from "../components/personalInfo";
 gsap.registerPlugin(ScrollTrigger);
 
 export function AboutMe() {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  });
+
   useEffect(() => {
     gsap.from("#headingdiv", {
       opacity: 0,
@@ -65,7 +76,7 @@ export function AboutMe() {
   });
 
   return (
-    <div style={mainLayout}>
+    <div style={mainLayout} id="About-me">
       <div style={outerLayout}>
         <div id="headingdiv" style={headingLayout}>
           <div style={lineLayout}></div>
@@ -74,9 +85,21 @@ export function AboutMe() {
         </div>
       </div>
       <div style={contentLayout}>
-        <div id="content-div" style={aboutMeTextLayout}>
-          <div>{ABOUT_ME_1st}&nbsp;</div>
-          {ABOUT_ME_2nd}
+        <div
+          style={
+            matches
+              ? { ...contentUpperLayout, flexDirection: "column" }
+              : contentUpperLayout
+          }
+        >
+          <div id="content-div" style={aboutMeTextLayout}>
+            <div style={{ fontWeight: "900" }}>{ABOUT_ME_1st}&nbsp;</div>
+            {ABOUT_ME_2nd}
+          </div>
+
+          <div
+            style={{ width: "50%", height: "50%", backgroundColor: "brown" }}
+          ></div>
         </div>
         <div
           id="personalInfo-div"

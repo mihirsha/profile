@@ -44,7 +44,7 @@ export default function Home() {
       {!openMenu ? (
         <div>
           <NameNavBar matches={matches} setOpenMenu={setOpenMenu} />
-          {/* {matches ? <NavBar /> : <></>} */}
+
           <div
             style={
               matches

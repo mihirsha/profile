@@ -13,12 +13,18 @@ code {
 }
 #headingdiv{
   opacity: 0;
+  bottom: 15;
+  right: 10,
 }
 #content-div{
   opacity: 0;
+  bottom: 15;
+  right: 10,
 }
 #personalInfo-div{
   opacity: 0;
+  bottom: 15;
+  right: 10,
 }
 
 .Animate-heading {

@@ -7,7 +7,7 @@ import { NavbarButton } from "./button";
 import { FaBars } from "react-icons/fa";
 import { PERSON_NAME_FIRSTNAME, PERSON_NAME_SURNAME } from "../constant";
 import { MENU_ITEMS } from "../constant";
-import { SocialMediaIcons } from "./socialMediaIcons";
+// import { SocialMediaIcons } from "./socialMediaIcons";
 import { motion } from "framer-motion";
 
 export function NavBar() {
@@ -35,7 +35,7 @@ export function NameNavBar(props: any) {
             y: 0,
             transition: {
               // ease: [0.6, 0.01, -0.05, 0.95],
-              duration: 0.5,
+              duration: 1,
             },
           }}
           exit={{
@@ -52,7 +52,8 @@ export function NameNavBar(props: any) {
         </motion.div>
         {props.matches ? (
           <div style={iconsDownLayout}>
-            <SocialMediaIcons />
+            {/* <SocialMediaIcons /> */}
+            {props.matches ? <NavBar /> : <></>}
           </div>
         ) : (
           <div
