@@ -12,13 +12,32 @@ import { motion } from "framer-motion";
 
 export function NavBar() {
   return (
-    <div style={navbarComponent}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          // ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1.2,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        y: -20,
+        transition: {
+          ease: "easeInOut",
+          duration: 0.3,
+        },
+      }}
+      style={navbarComponent}
+    >
       {/* <div style={{ display: "flex", flexDirection: "row" }}> */}
       {MENU_ITEMS.map((it: string, index: any) => {
         return <NavbarButton text={it} />;
       })}
       {/* </div> */}
-    </div>
+    </motion.div>
   );
 }
 
