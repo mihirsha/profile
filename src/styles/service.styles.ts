@@ -37,7 +37,7 @@ export const headingLayout: CSSProperties = {
   margin:"1.5em",
   color: "rgba(72,69,69,1)",
   // width: "90vw",
-  width:"100%",
+  width:"98%",
   // backgroundColor:"purple",
   // height:"100%"
 };

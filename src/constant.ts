@@ -18,6 +18,7 @@ export const MENU_ITEMS = [
   "Experience",
   "Projects",
 ];
+export const DIV_IDS = ["", "", "", "experienceId", ""]
 export const MENU_ITEMS_DIV = [
   "#About-me",
   "About me",

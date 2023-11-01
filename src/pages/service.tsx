@@ -70,7 +70,7 @@ export function Service() {
   });
 
   return (
-    <div style={mainLayout} id="About-me">
+    <div style={mainLayout} id="experienceId">
         <div id="headingdiv" style={headingLayout}>
           <div style={{display:"flex", justifyContent:"center", alignItems:"center", fontSize:"4em", letterSpacing:".4em", position:"relative", opacity:0.07, fontFamily:"poppins"}}>WORK EXPERIENCE</div>
           <div style={{position:"absolute", display:"flex", flexDirection:"row", alignItems:"center"}}>
@@ -84,7 +84,7 @@ export function Service() {
           <div style={{ 
             width:"50%", 
             height:"100%",
-            // backgroundColor:"yellow"
+            backgroundColor:"yellow"
           }}> </div>
           <div style={{height:"100%", width:"0.1%", backgroundColor:"#b1b1b1"}}></div>
           {/* <div style={{
@@ -127,7 +127,7 @@ export function Service() {
                     // position:"relative"
                     
                   }}>
-                     {/* <img src={nielsenImage} alt="" className="image-nielsen"/> */}
+                     
                   </div>
                   <div style={{
                     width:"10%",
@@ -245,10 +245,5 @@ function Card(props: any) {
         </div>
         </div>  
       </div>
-      
-      
-
-
-
   </div>)
 }
