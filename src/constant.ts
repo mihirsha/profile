@@ -47,8 +47,34 @@ export const ABOUT_ME_2nd =
 // PERSONAL INFORMATION
 export const personalInfoList = ["EXPERIENCE", "AGE", "RESIDENCE", "ADDRESS"];
 export const personalInfoAnsList = [
-  "0.6 yr",
+  "1 yr",
   "22",
   "India",
-  "Bengaluru, Karnataka",
+  "Chennai, TamilNadu",
 ];
+
+export const COMPANY = ["Nielsen Pvt Ltd", "SleevesUp Pvt Ltd", "Coresonant Pvt Ltd"]
+export const EXPERIENCE_DATE = ["Oct 2023 - Present", "Mar 2023 - Sept 2023", "Nov 2021- Feb 2022"]
+export const EXPERIENCE_LOCATIONS = ["Mumbai (Remote)", "Benglauru", "Remote"]
+export const PROFESSION_TYPE = ["Permanent Full-time", "Internship", "Internship"]
+export const DESIGNATION = ["Software Engineer", "Full-Stack Software Engineer", "Software Engineer"]
+
+export const EXPERIENCE_1_INFO = [
+  // "Dockerized & deployed multiple MicroService-Endpoint using Fastapi & Spring Boot.", 
+  "Strong understanding of web-based architecture - web servers, load balancing, caching, databases, sharding, performance, scale.", 
+  // "Carried out rigorous unit testing, took part in code reviews to guarantee high-quality code and coding standards compliance."
+]
+
+export const EXPERIENCE_2_INFO = [
+  // "Dockerized & deployed multiple MicroService-Endpoint using Fastapi & Spring Boot.", 
+  // "Strong understanding of web-based architecture - web servers, load balancing, caching, databases, sharding, performance, scale.", 
+  "Carried out rigorous unit testing, took part in code reviews to guarantee high-quality code and coding standards compliance."
+]
+
+export const EXPERIENCE_3_INFO = [
+  "Dockerized & deployed multiple MicroService-Endpoint using Fastapi & Spring Boot.", 
+  // "Strong understanding of web-based architecture - web servers, load balancing, caching, databases, sharding, performance, scale.", 
+  // "Carried out rigorous unit testing, took part in code reviews to guarantee high-quality code and coding standards compliance."
+]
+
+export const EXPERIENCE_CONTENT = [EXPERIENCE_1_INFO, EXPERIENCE_2_INFO, EXPERIENCE_3_INFO]
