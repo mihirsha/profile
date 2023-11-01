@@ -115,8 +115,45 @@ code {
 }
 
 
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:110%;
+  /* top: 0; */
+  top: -100%;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #eeeeee25;
+  backdrop-filter: blur(10px);
+  transition: 1s;
+}
+
+.card-background:hover .card-body{
+  top: 0
+}
+
+.card-background {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+
 
 
 /* ::-webkit-scrollbar {
   width: 2px
 } */
+
+
+.image-nielsen{
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  /* padding: absolute; */
+  object-fit: cover;
+
+}
