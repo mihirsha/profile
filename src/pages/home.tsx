@@ -22,6 +22,7 @@ import { NavBar, NameNavBar } from "../components/navbar";
 import { FaArrowDown, FaArrowLeft } from "react-icons/fa";
 import { MAIN_SCREEN_BACKGROUND } from "../palette";
 import { Menu } from "../components/menu";
+import ProfileImage from "../images/ProfileImage.jpg"
 import { iconsDownLayout, iconsDownLayoutMob } from "../styles/navbar.styles";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,13 +35,29 @@ export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    window
-      .matchMedia("(min-width: 768px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
-  }, [openMenu]);
+  //   window
+  //     .matchMedia("(min-width: 768px)")
+  //     .addEventListener("change", (e) => setMatches(e.matches));
+  // }, [openMenu]);
+
+  // useEffect(() => {
+  //   gsap.from("#profileBoxId", {
+  //     opacity: 0,
+  //   });
+  //   gsap.to("#profileBoxId", {
+  //     opacity: 1,
+  //     y: -15,
+  //     x: 10,
+  //     duration: 2,
+  //     scrollTrigger: {
+  //       trigger: "#maindiv",
+  //       // markers:true
+  //     },
+  //   });
+})
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div id="maindiv" style={{ overflow: "hidden" }}>
       {!openMenu ? (
         <div>
           <NameNavBar matches={matches} setOpenMenu={setOpenMenu} />
@@ -54,14 +71,48 @@ export default function Home() {
           >
             {matches ? (
               <div style={imageLayout}>
-                {/* <div
-              style={{
-                height: "35%",
-                width: "50%",
-                backgroundColor: "blue",
-                borderRadius: "50%",
-              }}
-            ></div> */}
+                <motion.div className="profileBox" id="profileBoxIds"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: 1,
+                    y: 20,
+                    x: -20,
+                    transition: {
+                      // ease: [0.6, 0.01, -0.05, 0.95],
+                      duration: 1.6,
+                    },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: 20,
+                    x: -20,
+                    transition: {
+                      ease: "easeInOut",
+                      duration: 1,
+                    },
+                  }}
+                  style={{
+                    // height: "35%",
+                    // width: "50%",
+                    background: "#99999B",
+                    // borderRadius: "50%",
+                    // borderStyle:"solid",
+                    // borderWidth:".1em ",
+                    // borderColor:"#99999B",
+                    backgroundImage: ProfileImage,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                    height: "350px",
+                    width: "350px",
+                    boxShadow: "0% 20px 5px 5px rgba(0, 0, 0, 1)",
+                    marginLeft:"2em"
+                  }}
+            />
+              
+
+
+            
+            
               </div>
             ) : (
               <></>

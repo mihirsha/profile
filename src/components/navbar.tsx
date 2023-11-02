@@ -46,7 +46,7 @@ export function NameNavBar(props: any) {
               duration: 0.8,
             },
           }}
-          style={{ margin: "2em", fontWeight: 550, fontSize: "1.4rem" }}
+          style={{ margin: "2.6em", fontWeight: 550, fontSize: "1.2rem" }}
         >
           {PERSON_NAME_FIRSTNAME} {PERSON_NAME_SURNAME}
         </motion.div>
