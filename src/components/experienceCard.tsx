@@ -1,5 +1,4 @@
 import { FaMapPin, FaRegHandPointer } from "react-icons/fa"
-import { MAIN_SCREEN_BACKGROUND } from "../palette"
 import { cardBackgroundInformationLayout, cardOuterLayout, companyNameLayout, dateLayout, designationLayout, dividerLayout, professionTypeLayout } from "../styles/experienceCard.styles"
 
 export function ExperienceCard(props: any) {

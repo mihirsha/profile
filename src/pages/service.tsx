@@ -2,24 +2,14 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from "react";
-import { FaMapPin, FaRegHandPointer } from 'react-icons/fa';
-// import { TbHandFinger,  } from 'react-icons/tb';
-
-import nielsenImage from "../images/NielsenSymbol.jpg"
-
 import {
-  ABOUT_ME_1st,
-  ABOUT_ME_2nd,
   COMPANY,
   DESIGNATION,
   EXPERIENCE_CONTENT,
   EXPERIENCE_DATE,
   EXPERIENCE_LOCATIONS,
   PROFESSION_TYPE,
-  personalInfoAnsList,
-  personalInfoList,
 } from "../constant";
-import { Grid } from "@mui/material";
 import {
   headingLayout,
   lineLayout,
@@ -33,11 +23,13 @@ import {
   circularLayout,
   joinerLayout
 } from "../styles/service.styles";
-import { PersonalInfo } from "../components/personalInfo";
-import { MAIN_SCREEN_BACKGROUND } from "../palette";
 import { ExperienceCard } from "../components/experienceCard";
 
+
+
 gsap.registerPlugin(ScrollTrigger);
+
+
 
 export function Service() {
   const [matches, setMatches] = useState(
@@ -50,10 +42,12 @@ export function Service() {
       .addEventListener("change", (e) => setMatches(e.matches));
   });
 
+
   useEffect(() => {
     gsap.from("#headingdiv", {
       opacity: 0,
     });
+
     gsap.to("#headingdiv", {
       opacity: 1,
       y: -15,
@@ -64,13 +58,11 @@ export function Service() {
         // markers:true
       },
     });
-
-
+    
     gsap.from("#workexpid", {
       opacity: 0,
     });
     
-
     gsap.to("#workexpid", {
       opacity: 0.06,
       x: 5,
@@ -84,7 +76,6 @@ export function Service() {
       opacity: 0,
     });
 
-
     gsap.to("#Card", {
       opacity: 0.9,
       y: 15,
@@ -96,11 +87,9 @@ export function Service() {
       },
     });
 
-
     gsap.from("#treeDiv", {
       opacity: 0,
     });
-
 
     gsap.to("#treeDiv", {
       opacity: 0.8,
